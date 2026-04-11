@@ -10,8 +10,9 @@ import { Ring } from './createRing';
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1 , 1000);
 camera.position.set(0,0,30);
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer({antialias: true});
 renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
 document.body.appendChild(renderer.domElement);
 const controls = new OrbitControls(camera, renderer.domElement);
 
@@ -147,6 +148,21 @@ scene.add(neptune_ring);
 //NeptuneText
 const neptune_text_build = new Text('neptune', 20,36);
 const neptune_text = await neptune_text_build.createText();
+
+
+//Resize
+
+function onResize(){
+    const w = window.innerWidth; //Obtiene el ancho de la ventana.
+    const h = window.innerHeight; // Obtiene el alto de la ventana.
+
+    camera.aspect = w/h; //Recalcula el aspecto.
+    camera.updateProjectionMatrix(); // Lo Actualiza en la cámara.
+
+    renderer.setSize(w,h); //Lo renderiza.
+}
+
+window.addEventListener('resize', onResize);
 
 
 function animate(){
