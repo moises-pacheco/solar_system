@@ -3,6 +3,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { Planet } from './createPlanet';
 import { Text } from './createText';
 import { Ring } from './createRing';
+import { Stars } from './createStars';
 
 
 
@@ -15,6 +16,10 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(Math.min(devicePixelRatio,2));
 document.body.appendChild(renderer.domElement);
 const controls = new OrbitControls(camera, renderer.domElement);
+
+//Stars
+const stars = new Stars(50, 0.01, 2.5);
+scene.add(stars.stars);
 
 
 //Sun
@@ -166,6 +171,10 @@ window.addEventListener('resize', onResize);
 
 
 function animate(){
+    //Stars 
+    stars.createStarMovement();
+
+
     //texts
     mercury.add(mercury_text); //Como es hijo, hay que agregarlo en cada fotograma para que siga el movimiento del padre.
     venus.add(venus_text);
