@@ -1,4 +1,5 @@
-# Solar System by Moisés Pacheco
+# Sistema solar
+by Moisés Pacheco
 
 La astronomía es maravillosa, el universo es un océano de preguntas, he aquí un mini proyecto demostrando mi dos grandes pasiones: Programación + Astronomía
 
