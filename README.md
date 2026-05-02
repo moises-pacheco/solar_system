@@ -16,6 +16,7 @@ La astronomía es maravillosa - el universo es un océano de preguntas. He aquí
 
 # SISTEMA SOLAR 1.0.0
 
-He creado un sistema solar con la libreria de Three.js junto con el lenguaje de programación TypeScript. Todo es muy básico por ahora, están los planetas de nuestro sistema solar, sus nombres y sus órbitas. 
+- He creado un sistema solar con la libreria de Three.js junto con el lenguaje de programación TypeScript.
+[Todo es muy básico por ahora, están todos los planetas de nuestro sistema solar, sus nombres y sus órbitas.]
 
 ![image alt](https://github.com/moises-pacheco/solar_system/blob/981e5e734bb83ce45e80d8f0fdb7410148994bf5/solar_system.png)
