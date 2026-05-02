@@ -14,7 +14,7 @@ La astronomía es maravillosa - el universo es un océano de preguntas. He aquí
 ![image alt](https://github.com/moises-pacheco/solar_system/blob/724c52c277c89f20466008e89544ca072f577155/solar_system_2.png)
 
 
-# SISTEMA SOLAR 1.0.0
+# VERSIÓN 1.0.0
 
 - He creado un sistema solar con Three.js y TypeScript. De momento es bastante básico, tengo los planetas del sistema solar con sus nombres y colores, unas pocas estrellas por el fondo... y poco más la verdad.
 
