@@ -10,3 +10,6 @@ La astronomía es maravillosa - el universo es un océano de preguntas. He aquí
 - Agregación de una interfaz de usuario para tener la posibilidad de 'visitar' o 'explorar' los planetas (Trabajando en ello).
 
 ![image alt](https://github.com/moises-pacheco/solar_system/blob/ac788cb5db9d8143ef630b87e6a0cb709a0d21f4/solar_system_1.png)
+
+![image alt](https://github.com/moises-pacheco/solar_system/blob/724c52c277c89f20466008e89544ca072f577155/solar_system_2.png)
+
