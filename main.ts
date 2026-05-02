@@ -99,7 +99,7 @@ const mars_text_build = new Text('mars', 20, 36);
 const mars_text = await mars_text_build.createText();
 
 //Jupiter
-const jupiter_model = new Planet("jupiter", "#C4533D", 0.14,0, 32);
+const jupiter_model = new Planet("jupiter", "#C4533D", 0.14,0, 60);
 const jupiter = jupiter_model.createPlanet();
 scene.add(jupiter);
 
@@ -112,7 +112,7 @@ const jupiter_text_build = new Text('jupiter', 20, 36);
 const jupiter_text = await jupiter_text_build.createText();
 
 //Saturn 
-const saturn_model = new Planet("saturn", "#CC9A56", 0.12,0, 38);
+const saturn_model = new Planet("saturn", "#CC9A56", 0.12,0, 120);
 const saturn = saturn_model.createPlanet();
 scene.add(saturn);
 
@@ -129,7 +129,7 @@ const saturn_text_build = new Text('saturn', 20, 36);
 const saturn_text = await saturn_text_build.createText();
 
 //Uranus
-const uranus_model = new Planet("uranus", "#3D7EC4", 0.12, 0, 44);
+const uranus_model = new Planet("uranus", "#3D7EC4", 0.12, 0, 240);
 const uranus = uranus_model.createPlanet();
 scene.add(uranus);
 
@@ -142,7 +142,7 @@ const uranus_text_build = new Text('uranus', 20, 36);
 const uranus_text = await uranus_text_build.createText();
 
 //Neptune
-const neptune_model = new Planet("neptune", "#3D68C4", 0.11, 0, 50);
+const neptune_model = new Planet("neptune", "#3D68C4", 0.11, 0, 480);
 const neptune = neptune_model.createPlanet();
 scene.add(neptune);
 
