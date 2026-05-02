@@ -1,3 +1,61 @@
 *{
     margin: 0;
+    font-family: "Orbitron", sans-serif;
 }
+
+li{
+    list-style: none;
+}
+
+.ui{
+    color: white;
+    position: absolute;
+    z-index: 10;
+    padding: 3em 0 0 4em;
+}
+
+.planets{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 2em;
+    border-radius: 0 1em 1em 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.planets.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.planet_selection{
+    font-size: .48em;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 4em;
+    padding: 1em 4em 1em 4em;
+}
+
+.planet_selection:hover{
+    cursor: pointer;
+    background-color: rgba(98, 151, 152, 0.4);
+}
+
+
+.planets li{
+    font-size: .8em;
+    margin: .8em;
+    padding: .2em 2em .2em 2em;
+    border-radius: 1em;
+    border: 1px solid rgb(126, 196, 197);
+    text-align: center;
+}
+
+.planets li:hover{
+    cursor: pointer;
+    background-color: rgba(98, 151, 152, 0.4);
+}
+

@@ -40,7 +40,7 @@ export class Planet {
 
     createRing(){
         const ring_geometry = new THREE.RingGeometry(this.radio + 0.01, this.radio - 0.1, 200);
-        const ring_material = new THREE.MeshMatcapMaterial({color: 'gray', side: THREE.DoubleSide});
+        const ring_material = new THREE.MeshMatcapMaterial({color: '#ffffff', side: THREE.DoubleSide});
         const ring = new THREE.Mesh(ring_geometry, ring_material);
         ring.rotation.x = 1.57;
         this.ring = ring;
