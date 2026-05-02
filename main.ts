@@ -12,28 +12,16 @@ import { Helpers } from './createHelpers';
 
 //UI
 
-const ui = document.getElementById('ui');
 const planetSelection = document.getElementById('planet_selection');
-const planetButton = document.getElementById('planet_button');
 const planetList = document.getElementById('planets');
-let contador = 0;
 
-if(planetSelection) planetSelection.addEventListener('click', () =>{
-    if(contador % 2 == 0){
-        if(planetList) planetList.style.opacity = '100';
-        console.log(contador);
-        contador++;
-    }else{
-        if(planetList) planetList.style.opacity = '0';
-
-        console.log(contador);
-        contador++;
-    }
+if (planetSelection) {
+    planetSelection.addEventListener('click', () => {
+        planetList?.classList.toggle('open');
+    });
+}
 
 
-} )
-
-if(planetList) planetList.style.opacity = '0';
 
 
 

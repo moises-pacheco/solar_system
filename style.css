@@ -19,7 +19,16 @@ li{
     padding-bottom: 1em;
     padding-right: 2em;
     border-radius: 0 1em 1em 0;
-    transition: 1s ;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.planets.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .planet_selection{
