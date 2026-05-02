@@ -38,7 +38,7 @@ export class Rocks{
         )
 
 
-        const rocks_material = new THREE.PointsMaterial({size: this.rocksSize,color: 'gray'});
+        const rocks_material = new THREE.PointsMaterial({size: this.rocksSize,color: '#eaeaea'});
 
         const rocks = new THREE.Points(rocks_geometry, rocks_material);
         this.mesh = rocks;

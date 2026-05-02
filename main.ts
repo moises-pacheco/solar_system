@@ -20,8 +20,8 @@ document.body.appendChild(renderer.domElement);
 const controls = new OrbitControls(camera, renderer.domElement);
 
 //Stars
-const stars = new Stars(50, 0.01, 2.5);
-scene.add(stars.stars);
+// const stars = new Stars(50, 0.1, 2.5);
+// scene.add(stars.stars);
 
 
 //Sun
@@ -159,19 +159,19 @@ const neptune_text = await neptune_text_build.createText();
 
 
 // Rocks
-const rocks_template = new Rocks(220, 45, 38, 0.2, 0.002);
+const rocks_template = new Rocks(300, 54, 38, 0.2, 0.001);
 rocks_template.createRocks(); // return mesh
 const rocks = rocks_template.mesh;
 scene.add(rocks);
 
-const kuiper_belt_template = new Rocks(400, 600, 480, 1, 0.001);
+const kuiper_belt_template = new Rocks(800, 800, 480, 1, 0.001);
 kuiper_belt_template.createRocks();
 const kuiper_belt = kuiper_belt_template.mesh;
 scene.add(kuiper_belt);
 
 
 //Helpers
-const grid_helper = new Helpers(2000, 20, '#424242','#181818' );
+const grid_helper = new Helpers(2000, 50, '#282828','#181818' );
 const grid_helper_mesh = grid_helper.mesh;
 grid_helper_mesh.position.y = -4;
 scene.add(grid_helper_mesh);
@@ -201,7 +201,7 @@ function animate(){
 
 
     //Stars 
-    stars.createStarMovement();
+    // stars.createStarMovement();
 
 
     //texts

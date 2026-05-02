@@ -30,7 +30,7 @@ export class Text{
             depth: 0.4
         })
 
-        const text_material = new THREE.MeshMatcapMaterial({color: 'white'});
+        const text_material = new THREE.MeshMatcapMaterial({color: '#B2FF8C'});
         const text = new THREE.Mesh(text_geometry, text_material);
         text_geometry.center();
         text.position.y = this.positionY;
