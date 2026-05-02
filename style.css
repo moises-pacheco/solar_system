@@ -1,3 +1,41 @@
 *{
     margin: 0;
+    font-family: "Orbitron", sans-serif;
 }
+
+li{
+    list-style: none;
+}
+
+.ui{
+    color: white;
+    position: absolute;
+    z-index: 10;
+    padding: 2em;
+}
+
+.planets{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 2em;
+    border-radius: 0 1em 1em 0;
+}
+
+.planet_selection h1:hover{
+    cursor: pointer;
+}
+
+
+.planets li{
+    margin: .8em;
+    padding: 0 2em 0 2em;
+    border-radius: 1em;
+    border: 1px solid rgb(126, 196, 197);
+    text-align: center;
+}
+
+.planets li:hover{
+    cursor: pointer;
+    background-color: rgba(98, 151, 152, 0.4);
+}
+
