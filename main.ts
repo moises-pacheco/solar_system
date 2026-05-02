@@ -10,6 +10,44 @@ import { Helpers } from './createHelpers';
 
 
 
+//UI
+
+const ui = document.getElementById('ui');
+const planetSelection = document.getElementById('planet_selection');
+const planetButton = document.getElementById('planet_button');
+const planetList = document.getElementById('planets');
+let contador = 0;
+
+if(planetSelection) planetSelection.addEventListener('click', () =>{
+    if(contador % 2 == 0){
+        if(planetList) planetList.style.opacity = '100';
+        console.log(contador);
+        contador++;
+    }else{
+        if(planetList) planetList.style.opacity = '0';
+
+        console.log(contador);
+        contador++;
+    }
+
+
+} )
+
+if(planetList) planetList.style.opacity = '0';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1 , 10000);
 camera.position.set(0,25,90);
