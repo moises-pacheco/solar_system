@@ -155,6 +155,44 @@ const neptune_text_build = new Text('neptune', 20,36);
 const neptune_text = await neptune_text_build.createText();
 
 
+
+// Prueba rocas girando alrederor
+
+
+const N = 250;
+let angle_rocks = 0;
+
+const rocks_position = new Float32Array(N * 3);
+
+for(let i = 0; i < N; i++){
+    rocks_position[i * 3] = Math.cos(angle_rocks) * (Math.floor(Math.random() * (45 - 38 + 1)) + 38);
+    rocks_position[i * 3 + 1] = Math.floor(Math.random() * (3 - (-4) + 1) + (-4));
+    rocks_position[i * 3 +2 ] = Math.sin(angle_rocks) * (Math.floor(Math.random() * (45 - 38 + 1)) + 38);
+    angle_rocks++;
+}
+const rocks_geometry = new THREE.BufferGeometry();
+rocks_geometry.setAttribute(
+    'position',
+    new THREE.BufferAttribute(rocks_position,3)
+)
+
+const rocks_material = new THREE.PointsMaterial({size: 0.4,color: 'gray'});
+
+const rocks = new THREE.Points(rocks_geometry, rocks_material);
+scene.add(rocks);
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Resize
 
 function onResize(){
