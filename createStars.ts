@@ -32,7 +32,7 @@ export class Stars{
 
         const stars_material = new THREE.PointsMaterial({
             color: '#F0F0F0',
-            opacity: 0.38,
+            opacity: 0.15,
             transparent: true,
              size : tamanio,
             sizeAttenuation: false});

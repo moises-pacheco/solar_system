@@ -4,12 +4,14 @@ import { Planet } from './createPlanet';
 import { Text } from './createText';
 import { Ring } from './createRing';
 import { Stars } from './createStars';
+import { Rocks } from './createRocks';
+import { Helpers } from './createHelpers';
 
 
 
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1 , 1000);
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1 , 10000);
 camera.position.set(0,25,90);
 const renderer = new THREE.WebGLRenderer({antialias: true});
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -156,40 +158,23 @@ const neptune_text = await neptune_text_build.createText();
 
 
 
-// Prueba rocas girando alrederor
-
-
-const N = 250;
-let angle_rocks = 0;
-
-const rocks_position = new Float32Array(N * 3);
-
-for(let i = 0; i < N; i++){
-    rocks_position[i * 3] = Math.cos(angle_rocks) * (Math.floor(Math.random() * (45 - 38 + 1)) + 38);
-    rocks_position[i * 3 + 1] = Math.floor(Math.random() * (3 - (-4) + 1) + (-4));
-    rocks_position[i * 3 +2 ] = Math.sin(angle_rocks) * (Math.floor(Math.random() * (45 - 38 + 1)) + 38);
-    angle_rocks++;
-}
-const rocks_geometry = new THREE.BufferGeometry();
-rocks_geometry.setAttribute(
-    'position',
-    new THREE.BufferAttribute(rocks_position,3)
-)
-
-const rocks_material = new THREE.PointsMaterial({size: 0.4,color: 'gray'});
-
-const rocks = new THREE.Points(rocks_geometry, rocks_material);
+// Rocks
+const rocks_template = new Rocks(220, 45, 38, 0.2, 0.002);
+rocks_template.createRocks(); // return mesh
+const rocks = rocks_template.mesh;
 scene.add(rocks);
 
+const kuiper_belt_template = new Rocks(400, 600, 480, 1, 0.001);
+kuiper_belt_template.createRocks();
+const kuiper_belt = kuiper_belt_template.mesh;
+scene.add(kuiper_belt);
 
 
-
-
-
-
-
-
-
+//Helpers
+const grid_helper = new Helpers(2000, 20, '#424242','#181818' );
+const grid_helper_mesh = grid_helper.mesh;
+grid_helper_mesh.position.y = -4;
+scene.add(grid_helper_mesh);
 
 
 
@@ -209,6 +194,12 @@ window.addEventListener('resize', onResize);
 
 
 function animate(){
+
+    //Rocks
+    rocks_template.createRockMovement();
+    kuiper_belt_template.createRockMovement();
+
+
     //Stars 
     stars.createStarMovement();
 
